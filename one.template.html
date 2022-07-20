@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ALZ Template</title>
+    <style>
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .ExternalClass {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        body {
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .bkg-purple {
+            background: #4A0D66;
+        }
+
+        .font-01 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .font-02 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-purple {
+            color: #4A0D66;
+        }
+
+        .text-grey {
+            color: #808285;
+        }
+
+        .text-black {
+            color: #000000;
+        }
+
+        h1,
+        .h1,
+        .headline {
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        @media only screen and (min-width: 480px) {
+
+            h1,
+            .h1,
+            .headline {
+                font-size: 22px !important;
+            }
+        }
+
+        h2,
+        .h2,
+        .subhead {
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.22222222;
+        }
+
+        p,
+        .p,
+        .copy {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 1.375;
+            color: #000000;
+            font-weight: normal;
+        }
+
+        a,
+        .a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        a sup,
+        .a sup,
+        a .sup,
+        .a .sup {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn {
+            min-height: 37px;
+            padding: 9px 14px;
+            display: inline-block;
+            box-sizing: border-box;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn.btn-primary {
+            background: #F3A73B;
+            border-bottom: 5px solid #D59333;
+            color: #431662;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn.btn-primary {
+                background: #F3A73B !important;
+                border-bottom: 5px solid #D59333 !important;
+                color: #431662 !important;
+            }
+        }
+
+        [data-ogsc] .btn-primary {
+            background: #F3A73B !important;
+            border-bottom: 5px solid #D59333 !important;
+            color: #431662 !important;
+        }
+
+        .mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .mb-1 {
+            margin-bottom: 5px !important;
+        }
+
+        .mb-3 {
+            margin-bottom: 10px !important;
+        }
+
+        .mb-4 {
+            margin-bottom: 30px !important;
+        }
+
+        .mb-5 {
+            margin-bottom: 50px !important;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .header-logo-container {
+            padding: 2px 8px 7px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .header-logo-container {
+                padding: 2px 10px 4px !important;
+            }
+        }
+
+        .header-logo {
+            display: inline-block;
+        }
+
+        .browser-link {
+            font-size: 10px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .save-the-date .headline-container {
+            padding: 17px 26px 14px 24px;
+        }
+
+        .save-the-date .headline {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .save-the-date .subhead {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .save-the-date .icon {
+            width: 100%;
+            max-width: 51px;
+            display: block;
+            height: auto;
+            margin: 0 auto 12px;
+        }
+
+        .save-the-date .save-link,
+        .save-the-date .save-text {
+            font-weight: bold;
+            font-size: 12px;
+            display: block;
+            color: #fff;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .save-the-date .calendar-container {
+            width: 120px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .save-the-date .calendar-container {
+                font-size: 125px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .save-the-date {
+                background: #182A36 !important;
+            }
+
+            .save-the-date .headline-container {
+                background: #182A36 !important;
+            }
+
+            .save-the-date .headline {
+                color: #fff !important;
+            }
+
+            .save-the-date .subhead {
+                color: #fff !important;
+            }
+        }
+
+        .save-the-date [data-ogsc] .headline-container {
+            background: #182A36 !important;
+        }
+
+        .save-the-date [data-ogsc] .headline {
+            color: #fff !important;
+        }
+
+        .save-the-date [data-ogsc] .subhead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .save-the-date {
+            background: #182A36 !important;
+        }
+
+        .purple-headline .headline-container {
+            padding: 17px 26px 14px 24px;
+            background: #4A0D66;
+        }
+
+        .purple-headline .headline {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .purple-headline .subhead {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .purple-headline .icon {
+            width: 100%;
+            max-width: 51px;
+            display: block;
+            height: auto;
+            margin: 0 auto 12px;
+        }
+
+        .purple-headline .save-link,
+        .purple-headline .save-text {
+            font-weight: bold;
+            font-size: 12px;
+            display: block;
+            color: #fff;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .purple-headline .calendar-container {
+            width: 120px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .purple-headline .calendar-container {
+                font-size: 125px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .purple-headline {
+                background: #182A36 !important;
+            }
+
+            .purple-headline .headline-container {
+                background: #182A36 !important;
+            }
+
+            .purple-headline .headline {
+                color: #fff !important;
+            }
+
+            .purple-headline .subhead {
+                color: #fff !important;
+            }
+        }
+
+        .purple-headline [data-ogsc] .headline-container {
+            background: #182A36 !important;
+        }
+
+        .purple-headline [data-ogsc] .headline {
+            color: #fff !important;
+        }
+
+        .purple-headline [data-ogsc] .subhead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .purple-headline {
+            background: #182A36 !important;
+        }
+
+        .main-content-container {
+            padding: 25px 26px 40px;
+        }
+
+        .main-content-container h1,
+        .main-content-container .h1,
+        .main-content-container .headline {
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        @media only screen and (min-width: 480px) {
+
+            .main-content-container h1,
+            .main-content-container .h1,
+            .main-content-container .headline {
+                font-size: 22px !important;
+            }
+        }
+
+        .main-content-container h2,
+        .main-content-container .h2,
+        .main-content-container .subhead {
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .main-content-container p,
+        .main-content-container .p,
+        .main-content-container .copy {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .main-content-container a,
+        .main-content-container .a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .main-content-container a sup,
+        .main-content-container .a sup,
+        .main-content-container a .sup,
+        .main-content-container .a .sup {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .main-content-container {
+                background: #182A36 !important;
+            }
+
+            .main-content-container h1,
+            .main-content-container .h1,
+            .main-content-container .headline,
+            .main-content-container h2,
+            .main-content-container .h2,
+            .main-content-container .subhead,
+            .main-content-container p,
+            .main-content-container .p,
+            .main-content-container .copy,
+            .main-content-container a,
+            .main-content-container .a {
+                color: #fff !important;
+            }
+        }
+
+        .main-content-container [data-ogsc] h1,
+        .main-content-container [data-ogsc] .h1,
+        .main-content-container [data-ogsc] .headline,
+        .main-content-container [data-ogsc] h2,
+        .main-content-container [data-ogsc] .h2,
+        .main-content-container [data-ogsc] .subhead,
+        .main-content-container [data-ogsc] p,
+        .main-content-container [data-ogsc] .p,
+        .main-content-container [data-ogsc] .copy,
+        .main-content-container [data-ogsc] a,
+        .main-content-container [data-ogsc] .a {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .main-content-container {
+            background: #182A36 !important;
+        }
+
+        .full-width-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .arrow-list .icon-arrow {
+            display: block;
+            width: 9px;
+            height: auto;
+            float: right;
+            margin-right: 7px;
+            margin-top: 7px;
+        }
+
+        .arrow-list .list-icon {
+            padding-left: 27px;
+            width: 44px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .arrow-list .list-icon {
+                padding-left: 11px !important;
+                width: 26px !important;
+            }
+        }
+
+        .arrow-list .sub-list-icon {
+            padding-left: 0px;
+            width: 44px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .arrow-list .sub-list-icon {
+                padding-left: 10px !important;
+                width: 26px !important;
+            }
+        }
+
+        .arrow-list .list-item *,
+        .arrow-list .list-item p,
+        .arrow-list .list-item .p {
+            margin: 0;
+            line-height: 1.5;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .arrow-list .sub-list-item *,
+        .arrow-list .sub-list-item p,
+        .arrow-list .sub-list-item .p {
+            margin: 0;
+            line-height: 1.5;
+            padding-left: 20px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .block-quote {
+            box-sizing: border-box;
+        }
+
+        .block-quote .mark {
+            width: 60px;
+            font-family: "Roboto", sans-serif;
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 18px;
+        }
+
+        .block-quote .quote {
+            font-size: 22px;
+            font-style: italic;
+            font-weight: normal;
+            line-height: 1.27272727;
+            margin-bottom: 6px;
+        }
+
+        .block-quote .author {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2;
+            text-transform: uppercase;
+        }
+
+        .block-quote * {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .block-quote .quote {
+                color: #fff !important;
+            }
+        }
+
+        .block-quote [data-ogsc] .quote {
+            color: #fff !important;
+        }
+
+        .lead-container {
+            background: #ece7ef;
+            border-top: 11px solid #431662;
+            box-sizing: border-box;
+        }
+
+        .lead-container .lead {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .lead-container {
+                background: #394852 !important;
+                border-top: 11px solid #431662 !important;
+            }
+
+            .lead-container .lead {
+                color: #fff !important;
+            }
+        }
+
+        .lead-container [data-ogsc] .lead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .lead-container {
+            background: #394852 !important;
+            border-top: 11px solid #431662 !important;
+        }
+
+        .footer {
+            color: #fff !important;
+        }
+
+        .footer .footer-small {
+            color: #fff !important;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer .footer-small a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .footer .footer-small {
+                font-size: 10px !important;
+            }
+        }
+
+        .footer .footer-small-xs {
+            color: #fff !important;
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer .footer-small-xs a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+
+        .light-mode {
+            display: block;
+        }
+
+        .dark-mode {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .light-mode {
+                display: none;
+            }
+
+            .dark-mode {
+                display: block;
+            }
+        }
+
+        [data-ogsc] .light-mode {
+            display: none;
+        }
+
+        [data-ogsc] .dark-mode {
+            display: block;
+        }
+
+        .img-list-comp .half-width-img {
+            display: none;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .img-list-comp .full-width-img {
+                display: none !important;
+            }
+
+            .img-list-comp .half-width-img {
+                display: block !important;
+                width: 100%;
+            }
+
+            .img-list-comp .list-container {
+                width: 55% !important;
+            }
+        }
+
+        .img-list-comp .list-container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body marginwidth="0" style="-webkit-font-smoothing: antialiased; background-color: #ffffff; font-family: Verdana, Geneva, sans-serif; margin: 0; padding: 0; width: 100%;" marginheight="0" topmargin="0" leftmargin="0">
+    <!--[if mso]><center><table><tr><td width="600"><![endif]-->
+    <table class="main-container font-01" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" style="background-color: #ffffff; border-collapse: collapse; border-spacing: 0px; font-family: 'Roboto', sans-serif; margin: 0 auto; max-width: 600px; overflow: hidden; width: 100%;">
+        <tr>
+            <td width="100%" valign="top" bgcolor>
+                <!-- START HEADER AREA-->
+                <table class="deviceWidth bkg-purple" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td class="header-logo-container" align="left" width="50%" valign="top" style="padding: 2px 8px 7px;"><a class="header-logo" href="#" style="color: inherit; display: inline-block; font-weight: bold; text-decoration: none;"><img width="100%" src="./images/AAIC22_HorizontalLockup_v.png" alt="alzheimer's association | AAIC 2022 logo" border="0" style="max-width:273px; display:block;height:auto;"></a></td>
+                        <td align="left" width="50%" valign="top" style="text-align:right; padding:5px 15px 10px;"><a class="text-white browser-link" href="#" style="color: #fff; display: inline-block; font-size: 10px; font-weight: bold; text-decoration: underline;">View in browser</a></td>
+                    </tr>
+                </table><!-- START HERO AREA-->
+                <table class="deviceWidth bkg-purple" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td align="left" width="100%" valign="center"><a class="hero-img" href="#" style="color: inherit; font-weight: bold; text-decoration: none;"><img width="100%" src="./images/2021_AAIC_Denver_Wednesday_161.jpg" alt="Image of speaker at AAIC conference" border="0" style="max-width:600px; display:block; height:auto;"></a></td>
+                    </tr>
+                </table>
+                <table class="deviceWidth save-the-date" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td class="headline-container" align="left" width="auto" valign="top" style="padding: 17px 26px 14px 24px;">
+                            <h1 class="headline text-purple" style="color: #4A0D66; font-family: 'Roboto', sans-serif; font-size: 20px; line-height: 1.2; margin-bottom: 8px; margin-top: 0;">Alzheimer&#146;s Association International Conference<sup>&reg;</sup> (AAIC)<sup>&reg;</sup> 2022</h1>
+                            <h2 class="subhead text-grey" style="color: #808285; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; line-height: 1.22222222; margin-bottom: 8px; margin-top: 0;">Event Dates, 2022 Location</h2>
+                        </td>
+                        <td class="calendar-container bkg-purple" align="left" width="120" valign="middle" style="background: #4A0D66; box-sizing: border-box; padding: 5px; padding-bottom: 0; text-align: center; width: 120px;"><a class="text-white save-link" href="#" style="color: #fff; display: block; font-size: 12px; font-weight: bold; text-decoration: underline; white-space: nowrap; width: 100%;"><img class="icon" src="./images/Calendar-Icon.png" alt border="0" height="51" width="51" style="display: block; height: auto; margin: 0 auto 12px; max-width: 51px; width: 100%;"><span class="save-text nowrap" style="color: #fff; display: block; font-size: 12px; font-weight: bold; white-space: nowrap; width: 100%;">Save the Date</span></a></td>
+                    </tr>
+                </table>
+                <table class="deviceWidth save-the-date light-mode" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; display: block; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td width="100%" height="15" style="padding-top:0;"><img src="./images/shadow.png" alt height="15" width="100%"></td>
+                    </tr>
+                </table>
+                <table class="deviceWidth save-the-date dark-mode" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; display: none; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td width="100%" height="15" style="padding-top:0;"><img src="./images/shadow-darkmode.png" alt height="15" width="100%"></td>
+                    </tr>
+                </table><!-- START MAIN CONTENT AREA-->
+                <table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; margin: 0 auto;" role="presentation">
+                    <tr>
+                        <td class="main-content-container" align="left" width="auto" valign="top" style="padding: 25px 26px 40px;">
+                            <h1 class="headline text-purple" style="color: #4A0D66; font-family: 'Roboto', sans-serif; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px;">Captivating Headline</h1>
+                            <p class="p" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.375; margin-block-end: 1em; margin-block-start: 1em; margin-inline-end: 0px; margin-inline-start: 0px;">All the world&#146;s a stage, and all the men and women merely players; They have their exits and entrances; And one man in his time plays many parts…</p>
+                            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:38px;v-text-anchor:middle;width:110px; background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block;" arcsize="10%" fillcolor="#F3A73B" stroke="#431662" class="btn btn-primary"><w:anchorlock/><center style="color:#431662; white-space:nowrap; font-size:14px; font-weight:bold; text-decoration:none;">Click Here</center></v:roundrect><![endif]-->
+                            <!--[if !mso]>--><a class="btn btn-primary" href="#" style="background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block; font-size: 14px; font-weight: bold; min-height: 37px; padding: 9px 14px; text-decoration: none;">&nbsp;&nbsp;Click Here&nbsp;&nbsp;</a>
+                            <![endif]-->    <p class="p mb-4" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.375; margin-block-end: 1em; margin-block-start: 1em; margin-bottom: 30px !important; margin-inline-end: 0px; margin-inline-start: 0px;">Now in its third year, the symposium will provide an overview of current needs, Alzheimer&#146;s science, and practice knowledge to advance research informing the care of Latino/Hispanic individuals living with dementia and their families. Attend the <a class="a" href="#" style="color: #000; font-weight: bold; text-decoration: underline;">Alzheimer&#146;s Association International Conference<sup style="display: inline-block; text-decoration: none;">&reg;</sup> (AAIC)<sup style="display: inline-block; text-decoration: none;">&reg;</sup> 2022</a> to collaborate with researchers and health care professionals and attend mentoring and networking events.</p><h2 class="subhead text-purple" style="color: #4A0D66; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; line-height: 1.22222222; margin-block-end: 0.83em; margin-block-start: 0.83em; margin-inline-end: 0px; margin-inline-start: 0px;">Important Sub-heading</h2><p class="p mb-4" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.375; margin-block-end: 1em; margin-block-start: 1em; margin-bottom: 30px !important; margin-inline-end: 0px; margin-inline-start: 0px;">Early career researchers are invited to submit an abstract for an oral or poster presentation at the symposium. Top-ranked abstracts will be selected for oral presentations during the following sessions:</p><div class="img-list-comp"><img class="full-width-img mb-4" src="./images/2021_AAIC_Denver_Thursday_006.jpg" alt="image of speaker at conference" style="display: block; height: auto; margin-bottom: 30px !important; width: 100%;"><!--[if mso]>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+                                <tr>
+                                    <td width="100%" valign="top" style="padding-top:20px;"></td>
+                                </tr>
+                            </table>
+                            <![endif]--><!--[if !mso]>
+                            <!--><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;" style="border-collapse: collapse; border-spacing: 0px;"><tr><td class="list-container" valign="middle" style="width: 100%;"><!--<![endif]-->
+                            <table class="arrow-list mb-4" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; margin: 0 auto; margin-bottom: 30px !important;" role="presentation">
+                                <tr class="arrow-list-item">
+                                    <td class="list-icon" align="left" valign="top" style="padding-left: 27px; width: 44px;"><img class="icon-arrow" src="./images/Arrow-Icon.png" alt height="12" width="9" style="display: block; float: right; height: auto; margin-right: 7px; margin-top: 7px; width: 9px;"></td>
+                                    <td class="list-item" align="left" valign="top" width="auto">
+                                        <p class="p" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.5; margin: 0; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">Bullet Point #1 with a short name</p>
+                                    </td>
+                                </tr>
+                                <tr class="arrow-list-item">
+                                    <td class="list-icon" align="left" valign="top" style="padding-left: 27px; width: 44px;"><img class="icon-arrow" src="./images/Arrow-Icon.png" alt height="12" width="9" style="display: block; float: right; height: auto; margin-right: 7px; margin-top: 7px; width: 9px;"></td>
+                                    <td class="list-item" align="left" valign="top" width="auto">
+                                        <p class="p" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.5; margin: 0; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">Bullet Point #2 with a longer name that extends to two lines</p>
+                                    </td>
+                                </tr>
+                                <tr class="arrow-list-item">
+                                    <td class="list-icon" align="left" valign="top" style="padding-left: 27px; width: 44px;"><img class="icon-arrow" src="./images/Arrow-Icon.png" alt height="12" width="9" style="display: block; float: right; height: auto; margin-right: 7px; margin-top: 7px; width: 9px;"></td>
+                                    <td class="list-item" align="left" valign="top" width="auto">
+                                        <p class="p" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.5; margin: 0; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">Bullet Point #3 with another longer name that extends to two lines</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if !mso]><!-->
+                        </td>
+                        <td class="half-width-container" width="44%" valign="middle"><img class="half-width-img" src="./images/2021_AAIC_Denver_Thursday_006_desktop.jpg" alt="image of speaker at conference" style="display: none; line-height: 1.5; margin: 0; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;"></td>
+                    </tr>
+                </table>
+                <!--<![endif]-->
+                <!--[if mso]><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;"><tr><td width="100%" valign="top" style="padding-top:20px;"></td></tr></table><![endif]-->
+                </div>
+                <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:38px;v-text-anchor:middle;width:110px; background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block;" arcsize="10%" fillcolor="#F3A73B" stroke="#431662" class="btn btn-primary"><w:anchorlock/><center style="color:#431662; white-space:nowrap; font-size:14px; font-weight:bold; text-decoration:none;">Click Here</center></v:roundrect><![endif]-->
+                <!--[if !mso]>--><a class="btn btn-primary" href="#" style="background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block; font-size: 14px; font-weight: bold; min-height: 37px; padding: 9px 14px; text-decoration: none;">&nbsp;&nbsp;Click Here&nbsp;&nbsp;</a>
+                <![endif]-->    <table class="block-quote" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse: collapse; border-spacing: 0px; box-sizing: border-box; margin: 0 auto; text-align: center;" role="presentation"><tr style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;"><td align="center" valign="top" style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px; padding: 20px 20px 0;"><img class="mark" src="./images/Quote-icon.png" alt height="52" width="60" style="display: block; font-family: 'Roboto', sans-serif; margin-block-end: 0em; margin-block-start: 0em; margin-bottom: 18px; margin-inline-end: 0px; margin-inline-start: 0px; margin-top: 16px; width: 60px;"></td></tr><tr style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;"><td align="center" width="100%" valign="top" style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;"><h4 class="quote text-purple" style="color: #4A0D66; font-size: 22px; font-style: italic; font-weight: normal; line-height: 1.27272727; margin-block-end: 0em; margin-block-start: 0em; margin-bottom: 6px; margin-inline-end: 0px; margin-inline-start: 0px;">I hope you’ll join me this year as we again make history with the world’s largest and most influential dementia research conference.</h4></td></tr><tr style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;"><td align="center" width="100%" valign="top" style="margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px; padding: 0 20px 36px;"><h5 class="author text-grey" style="color: #808285; font-size: 14px; font-weight: bold; line-height: 2; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px; text-transform: uppercase;">&mdash; Dr. Maria Carrillo</h5></td></tr></table><table class="lead-container" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #ece7ef; border-collapse: collapse; border-spacing: 0px; border-top: 11px solid #431662; box-sizing: border-box; margin: 0 auto; text-align: center;" role="presentation"><tr><td align="center" width="100%" valign="top" style="padding:20px 20px 0;"><p class="p text-purple lead" style="color: #000000; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: normal; line-height: 1.375; margin-block-end: 1em; margin-block-start: 1em; margin-bottom: 20px; margin-inline-end: 0px; margin-inline-start: 0px; margin-top: 0;">All the world’s a stage, and all the men and women merely players; They have their exits and entrances; And one man in his time plays many parts…</p></td></tr><tr><td align="center" width="100%" valign="top" style="padding:0 20px 24px;"><!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:38px;v-text-anchor:middle;width:110px; background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block;" arcsize="10%" fillcolor="#F3A73B" stroke="#431662" class="btn btn-primary">
+                    <w:anchorlock />
+                    <center style="color:#431662; white-space:nowrap; font-size:14px; font-weight:bold; text-decoration:none;">Click Here</center>
+                </v:roundrect>
+                <![endif]--><!--[if !mso]>--><a class="btn btn-primary" href="#" style="background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block; font-size: 14px; font-weight: bold; min-height: 37px; padding: 9px 14px; text-decoration: none;">&nbsp;&nbsp;Click Here&nbsp;&nbsp;</a>
+                <![endif]-->    </td></tr></table></td></tr></table><!-- START FOOTER AREA--><table class="deviceWidth bkg-purple footer" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; color: #fff !important; margin: 0 auto; text-align: center;" role="presentation"><tr> <td style="padding-top:32px"></td></tr><tr><td class="footer-container" align="left" width="100%" valign="top" style="text-align:center;"><a class="header-logo" href="#" style="color: inherit; display: inline-block; font-weight: bold; text-decoration: none;"><img width="100%" src="./images/AAIC22_HorizontalLockup_v.png" alt="alzheimer's association | AAIC 2022 logo" border="0" style="max-width:187px; display:block; height:auto; margin:0 auto; "></a></td></tr><tr><td class="footer-container" align="left" width="100%" valign="top" style="margin:0 auto; text-align:center; padding:15px 20px;"><p class="footer-small" style="color: #fff !important; font-family: 'Roboto', sans-serif; font-size: 12px; font-weight: normal; line-height: 1.6; margin: 0;"><span class="nowrap" style="white-space: nowrap;">Alzheimer&#146;s Association Home Office</span> <span class="nowrap" style="white-space: nowrap;">225 N. Michigan Ave., Fl. 17  Chicago, IL 60601</span> <br> <span class="nowrap" style="white-space: nowrap;">Phone: 800.272.3900</span>    |    <span class="nowrap" style="white-space: nowrap;">Email: event@alz.org</span>    |    <a class="nowrap" href="#" style="color: #fff; font-weight: normal; text-decoration: underline; white-space: nowrap;">alz.org/event-alzheimers-symposium</a> <br> <span class="nowrap" style="white-space: nowrap;">©2021 Alzheimer&#146;s Association, All rights reserved</span>  </p></td></tr><tr> <td class="footer-container" align="left" width="100%" valign="top" style="padding-bottom:50px; margin:0 auto; text-align:center; padding-left:20px; padding-right:20px;"><a class="footer-small" href="#" style="color: #fff !important; font-size: 12px; font-weight: normal; line-height: 1.6; margin: 0; text-decoration: underline;">View your email preferences or unsubscribe</a></td></tr></table></td></tr></table><!--[if mso]>
+            </td>
+        </tr>
+    </table>
+    </center>
+    <![endif]--></body></html>
