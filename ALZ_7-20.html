@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ALZ Template</title>
+    <style>
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        .ExternalClass {
+            width: 100%;
+            background-color: #ffffff;
+        }
+
+        body {
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .bkg-purple {
+            background: #4A0D66;
+        }
+
+        .bkg-dark-purple {
+            background: #310346;
+        }
+
+        .font-01 {
+            font-family: Arial, sans-serif;
+        }
+
+        .font-02 {
+            font-family: Arial, sans-serif;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-purple {
+            color: #4A0D66;
+        }
+
+        .text-grey {
+            color: #bcbdc0;
+        }
+
+        .text-black {
+            color: #000000;
+        }
+
+        h1,
+        .h1,
+        .headline {
+            font-family: Arial Black, Arial, sans-serif;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        @media only screen and (min-width: 480px) {
+
+            h1,
+            .h1,
+            .headline {
+                font-size: 22px !important;
+            }
+        }
+
+        h2,
+        .h2,
+        .subhead {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.22222222;
+        }
+
+        p,
+        .p,
+        .copy {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.375;
+            color: #000000;
+            font-weight: normal;
+        }
+
+        a,
+        .a {
+            font-weight: normal;
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        a sup,
+        .a sup,
+        a .sup,
+        .a .sup {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn {
+            min-height: 37px;
+            padding: 9px 14px;
+            display: inline-block;
+            box-sizing: border-box;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn.btn-primary {
+            background: #F3A73B;
+            border-bottom: 5px solid #D59333;
+            color: #431662;
+            margin-bottom: 15px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .btn.btn-primary {
+                background: #F3A73B !important;
+                border-bottom: 5px solid #D59333 !important;
+                color: #431662 !important;
+            }
+        }
+
+        [data-ogsc] .btn-primary {
+            background: #F3A73B !important;
+            border-bottom: 5px solid #D59333 !important;
+            color: #431662 !important;
+        }
+
+        .mb-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .mb-1 {
+            margin-bottom: 5px !important;
+        }
+
+        .mb-3 {
+            margin-bottom: 10px !important;
+        }
+
+        .mb-4 {
+            margin-bottom: 15px !important;
+        }
+
+        .mt-4 {
+            margin-top: 15px !important;
+        }
+
+        .mb-5 {
+            margin-bottom: 50px !important;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .header-logo-container {
+            padding: 2px 8px 7px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .header-logo-container {
+                padding: 2px 10px 4px !important;
+            }
+        }
+
+        .header-logo {
+            display: inline-block;
+        }
+
+        .browser-link {
+            font-size: 10px;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .secondary-subject {
+            font-size: 10px;
+            font-weight: bold;
+            color: #fff;
+            display: inline-block;
+        }
+
+        .save-the-date .headline-container {
+            padding: 17px 26px 14px 24px;
+        }
+
+        .save-the-date .headline {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .save-the-date .subhead {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .save-the-date .icon {
+            width: 100%;
+            max-width: 51px;
+            display: block;
+            height: auto;
+            margin: 0 auto 12px;
+        }
+
+        .save-the-date .save-link,
+        .save-the-date .save-text {
+            font-weight: bold;
+            font-size: 12px;
+            display: block;
+            color: #fff;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .save-the-date .calendar-container {
+            width: 120px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .save-the-date .calendar-container {
+                font-size: 125px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .save-the-date {
+                background: #182A36 !important;
+            }
+
+            .save-the-date .headline-container {
+                background: #182A36 !important;
+            }
+
+            .save-the-date .headline {
+                color: #fff !important;
+            }
+
+            .save-the-date .subhead {
+                color: #fff !important;
+            }
+        }
+
+        .save-the-date [data-ogsc] .headline-container {
+            background: #182A36 !important;
+        }
+
+        .save-the-date [data-ogsc] .headline {
+            color: #fff !important;
+        }
+
+        .save-the-date [data-ogsc] .subhead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .save-the-date {
+            background: #182A36 !important;
+        }
+
+        .purple-headline .headline-container {
+            padding: 17px 26px 14px 24px;
+            background: #4A0D66;
+        }
+
+        .purple-headline .headline {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .purple-headline .subhead {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .purple-headline .icon {
+            width: 100%;
+            max-width: 51px;
+            display: block;
+            height: auto;
+            margin: 0 auto 12px;
+        }
+
+        .purple-headline .save-link,
+        .purple-headline .save-text {
+            font-weight: bold;
+            font-size: 12px;
+            display: block;
+            color: #fff;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .purple-headline .calendar-container {
+            width: 120px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .purple-headline .calendar-container {
+                font-size: 125px !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .purple-headline {
+                background: #182A36 !important;
+            }
+
+            .purple-headline .headline-container {
+                background: #182A36 !important;
+            }
+
+            .purple-headline .headline {
+                color: #fff !important;
+            }
+
+            .purple-headline .subhead {
+                color: #fff !important;
+            }
+        }
+
+        .purple-headline [data-ogsc] .headline-container {
+            background: #182A36 !important;
+        }
+
+        .purple-headline [data-ogsc] .headline {
+            color: #fff !important;
+        }
+
+        .purple-headline [data-ogsc] .subhead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .purple-headline {
+            background: #182A36 !important;
+        }
+
+        .main-content-container {
+            padding: 25px 26px 40px;
+        }
+
+        .main-content-container h1,
+        .main-content-container .h1,
+        .main-content-container .headline {
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        @media only screen and (min-width: 480px) {
+
+            .main-content-container h1,
+            .main-content-container .h1,
+            .main-content-container .headline {
+                font-size: 22px !important;
+            }
+        }
+
+        .main-content-container h2,
+        .main-content-container .h2,
+        .main-content-container .subhead {
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .main-content-container p,
+        .main-content-container .p,
+        .main-content-container .copy {
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .main-content-container a,
+        .main-content-container .a {
+            font-weight: normal;
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .main-content-container a sup,
+        .main-content-container .a sup,
+        .main-content-container a .sup,
+        .main-content-container .a .sup {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .main-content-container {
+                background: #182A36 !important;
+            }
+
+            .main-content-container h1,
+            .main-content-container .h1,
+            .main-content-container .headline,
+            .main-content-container h2,
+            .main-content-container .h2,
+            .main-content-container .subhead,
+            .main-content-container p,
+            .main-content-container .p,
+            .main-content-container .copy,
+            .main-content-container a,
+            .main-content-container .a {
+                color: #fff !important;
+            }
+        }
+
+        .main-content-container [data-ogsc] h1,
+        .main-content-container [data-ogsc] .h1,
+        .main-content-container [data-ogsc] .headline,
+        .main-content-container [data-ogsc] h2,
+        .main-content-container [data-ogsc] .h2,
+        .main-content-container [data-ogsc] .subhead,
+        .main-content-container [data-ogsc] p,
+        .main-content-container [data-ogsc] .p,
+        .main-content-container [data-ogsc] .copy,
+        .main-content-container [data-ogsc] a,
+        .main-content-container [data-ogsc] .a {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .main-content-container {
+            background: #182A36 !important;
+        }
+
+        .full-width-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .arrow-list .icon-arrow {
+            display: block;
+            width: 9px;
+            height: auto;
+            float: right;
+            margin-right: 7px;
+            margin-top: 7px;
+        }
+
+        .arrow-list .list-icon {
+            padding-left: 27px;
+            width: 44px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .arrow-list .list-icon {
+                padding-left: 11px !important;
+                width: 26px !important;
+            }
+        }
+
+        .arrow-list .sub-list-icon {
+            padding-left: 0px;
+            width: 44px;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .arrow-list .sub-list-icon {
+                padding-left: 10px !important;
+                width: 26px !important;
+            }
+        }
+
+        .arrow-list .list-item {
+            background-size: 12px 8px;
+            list-style-image: url('https://www.alz.org/email/Testing/images/Arrow-Icon-small.png');
+        }
+
+        .arrow-list .list-item *,
+        .arrow-list .list-item p,
+        .arrow-list .list-item .p {
+            margin: 0;
+            line-height: 1.5;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .arrow-list .sub-list-item *,
+        .arrow-list .sub-list-item p,
+        .arrow-list .sub-list-item .p {
+            margin: 0;
+            line-height: 1.5;
+            padding-left: 20px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .arrow-list .dash-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .arrow-list .dash-list .list-item {
+            list-style-image: none;
+        }
+
+        .block-quote {
+            box-sizing: border-box;
+        }
+
+        .block-quote .mark {
+            width: 60px;
+            font-family: Arial, sans-serif;
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 18px;
+        }
+
+        .block-quote .quote {
+            font-size: 22px;
+            font-style: italic;
+            font-weight: normal;
+            line-height: 1.27272727;
+            margin-bottom: 6px;
+        }
+
+        .block-quote .author {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2;
+            text-transform: uppercase;
+        }
+
+        .block-quote * {
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .block-quote .quote {
+                color: #fff !important;
+            }
+        }
+
+        .block-quote [data-ogsc] .quote {
+            color: #fff !important;
+        }
+
+        .lead-container {
+            background: #ece7ef;
+            border-top: 11px solid #431662;
+            box-sizing: border-box;
+        }
+
+        .lead-container .lead {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .lead-container {
+                background: #394852 !important;
+                border-top: 11px solid #431662 !important;
+            }
+
+            .lead-container .lead {
+                color: #fff !important;
+            }
+        }
+
+        .lead-container [data-ogsc] .lead {
+            color: #fff !important;
+        }
+
+        [data-ogsc] .lead-container {
+            background: #394852 !important;
+            border-top: 11px solid #431662 !important;
+        }
+
+        .footer {
+            color: #fff !important;
+        }
+
+        .footer .footer-small {
+            color: #fff !important;
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer .footer-small a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .footer .footer-small {
+                font-size: 10px !important;
+            }
+        }
+
+        .footer .footer-small-xs {
+            color: #fff !important;
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer .footer-small-xs a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+
+        .light-mode {
+            display: block;
+        }
+
+        .dark-mode {
+            display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .light-mode {
+                display: none;
+            }
+
+            .dark-mode {
+                display: block;
+            }
+        }
+
+        [data-ogsc] .light-mode {
+            display: none;
+        }
+
+        [data-ogsc] .dark-mode {
+            display: block;
+        }
+
+        .img-list-comp .half-width-img {
+            display: none;
+        }
+
+        @media only screen and (min-width: 480px) {
+            .img-list-comp .full-width-img {
+                display: none !important;
+            }
+
+            .img-list-comp .half-width-img {
+                display: block !important;
+                width: 100%;
+            }
+
+            .img-list-comp .list-container {
+                width: 55% !important;
+            }
+        }
+
+        .img-list-comp .list-container {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body marginwidth="0"
+    style="-webkit-font-smoothing: antialiased; background-color: #ffffff; font-family: Arial, sans-serif !important; margin: 0; padding: 0; width: 100%;"
+    marginheight="0" topmargin="0" leftmargin="0">
+    <!--[if mso]><center><table><tr><td width="600"><![endif]-->
+    <table class="main-container font-01" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+        role="presentation"
+        style="background-color: #ffffff; border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto; max-width: 600px; overflow: hidden; width: 100%;">
+        <tr style="font-family: Arial, sans-serif !important;">
+            <td width="100%" valign="top" style="font-family: Arial, sans-serif !important;">
+                <table class="deviceWidth bkg-dark-purple" width="100%" border="0" cellpadding="0" cellspacing="0"
+                    align="center"
+                    style="background: #310346; background-color: #310346; border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+                    role="presentation">
+                    <tr>
+                        <td align="left" width="50%" valign="top"
+                            style="background-color: #310346; font-family: Arial, sans-serif !important; padding: 0px 15px 0px; text-align: right;">
+                            <p class="text-white secondary-subject"
+                                style="color: #fff; display: inline-block; font-family: Arial Regular, Arial, sans-serif !important; font-size: 10px; line-height: 1.375;">
+                                Present in San Diego, CA or Online</p>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- START HEADER AREA-->
+                <table class="deviceWidth bkg-purple" width="100%" border="0" cellpadding="0" cellspacing="0"
+                    align="center"
+                    style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+                    role="presentation">
+                    <tr>
+                        <td class="header-logo-container" align="left" width="50%" valign="top"
+                            style="background-color: #4A0D66; font-family: Arial, sans-serif !important; padding: 2px 8px 7px;">
+                            <a class="header-logo" href="#"
+                                style="color: inherit; display: inline-block; text-decoration: none;"><img width="100%"
+                                    src="https://www.alz.org/email/Testing/images/AAIC22_HorizontalLockup_v.png"
+                                    alt="alzheimer's association | AAIC 2022 logo" border="0"
+                                    style="display: block; height: auto; max-width: 273px;"></a></td>
+
+                        <td align="left" width="50%" valign="top"
+                            style="background-color: #4A0D66; font-family: Arial, sans-serif !important; padding: 5px 15px 10px; text-align: right;">
+                            <a class="text-white browser-link" href="#"
+                                style="color: #fff; display: inline-block; font-family: Arial, sans-serif !important; font-size: 10px; font-weight: normal; text-decoration: underline;">View
+                                in browser</a></td>
+                    </tr>
+                </table>
+                <!-- START HERO AREA-->
+                <table class="deviceWidth bkg-purple" width="100%" border="0" cellpadding="0" cellspacing="0"
+                    align="center"
+                    style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+                    role="presentation">
+                    <tr style="font-family: Arial, sans-serif !important;">
+                        <td align="left" width="100%" valign="center"
+                            style="font-family: Arial, sans-serif !important;"><a class="hero-img" href="#"
+                                style="color: inherit; font-family: Arial, sans-serif !important; font-weight: normal; text-decoration: none;"><img
+                                    width="100%"
+                                    src="./images/2021_AAIC.png"
+                                    alt="attendees at exhibits" border="0"
+                                    style="display: block; font-family: Arial, sans-serif !important; height: auto; max-width: 600px;"></a>
+                        </td>
+                    </tr>
+                </table>
+                <table class="deviceWidth purple-headline" width="100%" border="0" cellpadding="0" cellspacing="0"
+                    align="center"
+                    style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+                    role="presentation" background="#4A0D66">
+                    <tr style="font-family: Arial, sans-serif !important;">
+                        <td class="headline-container" align="left" width="auto" valign="top"
+                            style="background: #4A0D66; font-family: Arial, sans-serif !important; padding: 17px 26px 24px 24px;">
+                            <h1 class="headline text-white"
+                                style="color: #ffffff; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-bottom: 8px; margin-top: 0;">
+                                Alzheimer's Association International Conference<sup
+                                    style="font-family: Arial, sans-serif !important;">&reg;</sup> (AAIC)<sup
+                                    style="font-family: Arial, sans-serif !important;">&reg;</sup> 2022</h1>
+                            <h2 class="subhead text-grey"
+                                style="color: #bcbdc0; font-family: Arial Bold, Arial, sans-serif !important; font-size: 18px; font-weight: bold; line-height: 1.22222222; margin-bottom: 8px; margin-top: 0;">
+                                July 31-August 4 &gt; San Diego, CA USA</h2>
+                            <p style="color: #fff;">All the world's a stage, and all the men and women merely players;
+                                They have their exits and entrances; And one man in his time plays many parts…</p>
+                            <a class="btn btm-primary"
+                                style="background: #F3A73B; border-bottom: 5px solid #D59333; border-radius: 5px; box-sizing: border-box; color: #431662; display: inline-block; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: bold; min-height: 37px; padding: 9px 14px; text-decoration: none;"
+                                href="#">Schedule Updates</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- START MAIN CONTENT AREA-->
+                <table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+                    style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+                    role="presentation">
+                    <tr style="font-family: Arial, sans-serif !important;">
+                        <td class="main-content-container" align="left" width="auto" valign="top"
+                            style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+                            <ul class="arrow-list"
+                                style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+                                <li class="list-item"
+                                    style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                                    <h1 class="headline text-purple"
+                                        style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                                        Daily Highlights</h1>
+                                </li>
+                            </ul>
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                7:15 a.m.-5:45 p.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Registration Open
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                South Hall Lobby
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                8-9:30 a.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                EC-03 Is There A Causative Role For Infectious Organisms In Alzheimer's Disease?
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Concourse Hall 151
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                8-9:30 a.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Highlights From Emerging Leaders In Alzheimer's And Dementia: Butler Williams Scholars
+                                And Alzheimer's Association Awardees
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                502 AB
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                9:30 a.m.-4:15 p.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Exhibit Hall Open
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                South Hall GH
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                9:30-10:30 a.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Poster sessions, Exhibit Hall, South Hall GH
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                View over 500 poster presentations in the Exhibit Hall
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                10:30-11:45 a.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Presentations of “Neurotoxic Reactive Astrocytes Are Induced By Activated Microglia,” by
+                                Dr. Shane Liddelow and “The Epidemiology Of Diversity And Dementia,” by Dr. Rachel
+                                Whitmer
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                PL-03-01 & PL-03-02 plenary sessions, South Hall JK
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Noon-2 p.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                ISTAART Student Workshop Series: Careers In Science
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                Room 408 B
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                2-3:30 p.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                F3-03 EEG Techniques To Enable Next-Generation Approaches To Diagnose‚ Track And Measure
+                                Treatment Response In AD
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                South Hall JK
+                            </p>
+                            <!-- END DAY-->
+
+                            <p class="p"
+                                style="color: #4A0D66; font-family: Arial Regular, Arial, sans-serif !important; font-size: 18px; font-weight: normal; line-height: 1.375; margin-block-end: 0px; margin-block-start: 0px; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                4:15-5:45 p.m.
+                            </p>
+                            <p class="p mb-0 mt-0"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 16px; font-weight: bold; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                FTS3-01 Discussion Of BACEi Trial Findings: Challenges And Opportunities
+                            </p>
+                            <p class="p mt-0 mb-4"
+                                style="color: #000000; font-family: Arial, sans-serif !important; font-size: 14px; font-weight: normal; line-height: 1.375; margin-block-end: 0em; margin-block-start: 0em; margin-inline-end: 0px; margin-inline-start: 0px;">
+                                502 AB
+                            </p>
+                            <!-- END DAY-->
+
+                            <!--[if mso]>
+             <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+                                <tr>
+                                    <td width="100%" valign="top" style="padding-top:20px;"></td>
+                                </tr>
+                            </table>
+                            <![endif]-->
+                        </td>
+                    </tr>
+                </table>
+
+<!-- START MAIN CONTENT AREA-->
+<table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto; background-color: #4A0D66;"
+role="presentation">
+<tr style="font-family: Arial, sans-serif !important;">
+    <td class="main-content-container" align="left" width="auto" valign="top"
+        style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+        
+        <table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+        style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto; background-color: #4A0D66;"
+        role="presentation">
+            <tr style="font-family: Arial, sans-serif !important;">
+                <td class="main-content-container" align="left" width="auto" valign="top"
+                style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+                    <ul class="arrow-list"
+                    style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+                    <li class="list-item"
+                        style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                        <h1 class="headline text-purple"
+                            style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                            Daily Highlights</h1>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        </table>
+        
+        
+        <ul class="arrow-list"
+            style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+            <li class="list-item"
+                style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                <h1 class="headline text-purple"
+                    style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                    Daily Highlights</h1>
+            </li>
+        </ul>
+        
+
+        <!--[if mso]>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+            <tr>
+                <td width="100%" valign="top" style="padding-top:20px;"></td>
+            </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>
+</table>
+
+
+<!-- START MAIN CONTENT AREA-->
+<table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+role="presentation">
+<tr style="font-family: Arial, sans-serif !important;">
+    <td class="main-content-container" align="left" width="auto" valign="top"
+        style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+        <ul class="arrow-list"
+            style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+            <li class="list-item"
+                style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                <h1 class="headline text-purple"
+                    style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                    More Daily Highlights</h1>
+            </li>
+        </ul>
+        
+
+        <!--[if mso]>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+            <tr>
+                <td width="100%" valign="top" style="padding-top:20px;"></td>
+            </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>
+</table>
+
+
+<!-- START MAIN CONTENT AREA-->
+<table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto; background-color: #4A0D66;"
+role="presentation">
+<tr style="font-family: Arial, sans-serif !important;">
+    <td class="main-content-container" align="left" width="auto" valign="top"
+        style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+        <ul class="arrow-list"
+            style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+            <li class="list-item"
+                style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                <h1 class="headline text-purple"
+                    style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                    Daily Highlights</h1>
+            </li>
+        </ul>
+        
+
+        <!--[if mso]>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+            <tr>
+                <td width="100%" valign="top" style="padding-top:20px;"></td>
+            </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>
+</table>
+
+<!-- START MAIN CONTENT AREA-->
+<table class="deviceWidth" width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+style="border-collapse: collapse; border-spacing: 0px; font-family: Arial, sans-serif !important; margin: 0 auto;"
+role="presentation">
+<tr style="font-family: Arial, sans-serif !important;">
+    <td class="main-content-container" align="left" width="auto" valign="top"
+        style="font-family: Arial, sans-serif !important; font-size: 16px !important; padding: 36px 26px 5px;">
+        <ul class="arrow-list"
+            style="font-family: Arial, sans-serif !important;  margin-top:0 !important; margin-bottom: 30px; padding-inline-start:20px;">
+            <li class="list-item"
+                style="background-size: 12px 8px; font-family: Arial, sans-serif !important; list-style-image: url('./images/arrow-right.png');">
+                <h1 class="headline text-purple"
+                    style="color: #4A0D66; font-family: Arial Black, sans-serif !important; font-size: 20px; line-height: 1.2; margin-block-end: 0.67em; margin-block-start: 0.67em; margin-inline-end: 0px; margin-inline-start: 0px; margin-top:0px;">
+                    Daily Highlights</h1>
+            </li>
+        </ul>
+        
+
+        <!--[if mso]>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" border-collapse: collapse; border-spacing: 0px;">
+            <tr>
+                <td width="100%" valign="top" style="padding-top:20px;"></td>
+            </tr>
+        </table>
+        <![endif]-->
+    </td>
+</tr>
+</table>
+                <!-- START FOOTER AREA-->
+
+                <table class="deviceWidth bkg-purple footer" width="100%" border="0" cellpadding="0" cellspacing="0"
+                    align="center"
+                    style="background: #4A0D66; border-collapse: collapse; border-spacing: 0px; color: #fff !important; font-family: Arial, sans-serif !important; margin: 0 auto; text-align: center;"
+                    role="presentation">
+                    <tr style="font-family: Arial, sans-serif !important;">
+                        <td style="font-family: Arial, sans-serif !important; padding-top: 32px;"></td>
+                    </tr>
+                    <tr style="font-family: Arial, sans-serif !important;">
+                        <td class="footer-container" align="left" width="100%" valign="top"
+                            style="font-family: Arial, sans-serif !important; text-align: center;"><a
+                                class="header-logo" href="#"
+                                style="color: inherit; display: inline-block; font-family: Arial, sans-serif !important; font-weight: normal; text-decoration: none;"><img
+                                    width="100%"
+                                    src="https://www.alz.org/email/Testing/images/AAIC22_HorizontalLockup_v.png"
+                                    alt="alzheimer's association | AAIC 2022 logo" border="0"
+                                    style="display: block; font-family: Arial, sans-serif !important; height: auto; margin: 0 auto; max-width: 187px;"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="100%" valign="top"
+                            style="font-family: Arial, sans-serif !important; font-size: 10px; line-height: 150%; color: #FFFFFF; text-align: center; margin: 0 auto; padding: 15px 20px; text-align: center;">
+                            Alzheimer's Association Home Office 225 N. Michigan Ave., Fl. 17 Chicago, IL 60601<br>
+                            Phone: 800.272.3900 | Email: <a href="mailto:event@alz.org" target="_blank"
+                                style="color: #fff;">event@alz.org</a> | <a href="https://www.alz.org/aaic/overview.asp"
+                                target="_blank" style="color: #fff;">alz.org/event-alzheimers-symposium</a> <br>
+                            © [[S9:pattern:yyyy]] Alzheimer's Association. All rights reserved. <br><br>
+                            <a style="color:#FFFFFF" href="https://act.alz.org/site/CO">View your email preferences or
+                                unsubscribe.</a><br>
+
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!--[if mso]>
+                        </td>
+                    </tr>
+                </table>
+                </center>
+                <![endif]-->
+</body>
+
+</html>
